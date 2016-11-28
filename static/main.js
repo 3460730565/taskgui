@@ -27,7 +27,7 @@ socket.emit('create', cols, rows, function(err, data) {
   term.emit('open tab', self);
 });
  
-term.writeln('Welcome to task-gui');
+term.writeln('Welcome to task gui');
 // term.writeln('Connecting to websocket...');
  
 term.on('data', function(data) {
@@ -46,9 +46,3 @@ socket.on('connect', function() {
 socket.on('data', function(id, data) {
   term.write(data);
 });
-
-setTimeout(function(){
-  socket.emit('data', self.id, "l");
-  socket.emit('data', self.id, "s");
-  socket.emit('data', self.id, "\r");
-}, 4000)

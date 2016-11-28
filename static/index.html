@@ -10,7 +10,7 @@
   <script src="main.js" defer></script>
 </head>
 <body>
-  <h1>task gui</h1>
+  <h1>Task GUI</h1>
   <div id="main">
     <div class="task-list">
       <li>ls</li>
@@ -24,7 +24,7 @@
       $.get('task.json', function(res){
         console.log(res)
         var cd = "cd " + res.path
-        $.sh(cd, 4000)
+        $.sh(cd, 1000)
         
         var l = []
         for(var k in res.tasks){
