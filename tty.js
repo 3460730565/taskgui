@@ -18,11 +18,14 @@ app.get('/foo', function(req, res, next) {
   res.send('bar');
 });
 
-app.use(express.static(__dirname + '/../static'));
+app.use(express.static(__dirname + '/static'));
 
 var taskFile = __dirname + '/static/task.json'
 if (!fs.existsSync(taskFile)) {
-  fs.writeFileSync(taskFile,  JSON.stringify({}, null, 4))
+  fs.writeFileSync(taskFile,  JSON.stringify({
+    root:__dirname, 
+    path: currentPath
+  }, null, 4))
 }
 
 var packageFile = currentPath + '/package.json'
