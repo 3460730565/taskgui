@@ -29,6 +29,10 @@ $ npm i -D tg-plugin-npm-scripts
 $ tg
 ```
 
+if need auth, please fill user `foo` and password `bar`
+
+http://127.0.0.1:7878/
+
 ## Contributing
 
 1. Fork it
