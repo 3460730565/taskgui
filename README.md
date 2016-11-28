@@ -2,6 +2,8 @@
 
 task gui
 
+![Preview](docs/preview.png)
+
 ## Install
 
     [sudo]npm install -g taskgui
