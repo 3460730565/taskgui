@@ -358,6 +358,10 @@ onetime@^1.0.0:
   version "1.1.0"
   resolved "http://r.cnpmjs.org/onetime/download/onetime-1.1.0.tgz#a1f7838f8314c516f05ecefcbc4ccfe04b4ed789"
 
+open:
+  version "0.0.5"
+  resolved "http://r.cnpmjs.org/open/download/open-0.0.5.tgz#42c3e18ec95466b6bf0dc42f3a2945c3f0cad8fc"
+
 options@>=0.0.5:
   version "0.0.6"
   resolved "http://r.cnpmjs.org/options/download/options-0.0.6.tgz#ec22d312806bb53e731773e7cdaefcf1c643128f"

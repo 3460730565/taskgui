@@ -6,14 +6,16 @@ var express = require('express')
 var userHome = require('user-home')
 var currentPath = process.cwd()
 
-var app = tty.createServer({
+var conf = {
   static: __dirname + "/static",
   shell: 'zsh',
   users: {
     foo: 'bar'
   },
-  port: 8000
-});
+  port: 7878
+}
+
+var app = tty.createServer(conf);
 
 app.get('/foo', function(req, res, next) {
   res.send('bar');
@@ -54,5 +56,6 @@ for(var k in devDependencies){
 
 app.listen();
 
-
+var open = require("open");
+open("http://127.0.0.1:" + conf.port + "/");
 // fs.writeFileSync(__dirname + '/app/sre.json',  JSON.stringify(all, null, 4))

@@ -26,6 +26,7 @@
   "dependencies": {
     "debug": "^2.3.3",
     "inquirer": "^1.2.3",
+    "open": "^0.0.5",
     "tty.js": "^0.2.15",
     "tty2": "0.2.16",
     "user-home": "^2.0.0",
