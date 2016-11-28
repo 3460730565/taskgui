@@ -17,6 +17,14 @@ avaiable cli command
 $ tg
 ```
 
+## Start a project
+
+```
+$ npm init -y
+$ npm i -D tg-plugin-npm-scripts
+$ tg
+```
+
 ## Contributing
 
 1. Fork it
