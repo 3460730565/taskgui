@@ -29,7 +29,13 @@
         var l = []
         for(var k in res.tasks){
           for(var j in res.tasks[k].tasks){
-            l.push("<li class='awz' p='" + res.tasks[k].prefix + "'>" + res.tasks[k].tasks[j] + "</li>")
+            if (typeof res.tasks[k].tasks === 'object' && !isNaN(res.tasks[k].tasks.length)) {  
+              // array tasks = []
+              l.push("<li class='" + k + "' p='" + res.tasks[k].prefix + "'>" + res.tasks[k].tasks[j] + "</li>")
+            } else {
+              // object tasks = {}
+              l.push("<li class='" + k + "' p='" + res.tasks[k].prefix + "'>" + j + "</li>")
+            }
           }
         }
         

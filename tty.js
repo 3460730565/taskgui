@@ -51,6 +51,7 @@ for(var k in devDependencies){
       root:__dirname, 
       cwd: currentPath
     }
+    console.log('mount ' + currentPath + '/node_modules/' + k)
     require(currentPath + '/node_modules/' + k)(opts)
   }
 }

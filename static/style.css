@@ -195,3 +195,19 @@ h1 {
   float: right;
   width:79%;
 }
+
+.gulp{
+  color:red;
+}
+
+.npm_scripts{
+  color:blue;
+}
+
+.grunt{
+  color:green;
+}
+
+.webpack{
+  color:yellow;
+}
