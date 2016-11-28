@@ -21,6 +21,10 @@
   </div>
   <script>
     $(function(){
+      $(window).keydown(function (e){
+          if (e.metaKey  && e.which == 75) $.sh('clear')
+      });
+      
       $.get('task.json', function(res){
         console.log(res)
         var cd = "cd " + res.path
