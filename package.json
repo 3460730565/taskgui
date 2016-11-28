@@ -1,20 +1,32 @@
 {
   "name": "taskgui",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "scripts run easy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "vp && git push",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./postinstall.sh"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "sre": "index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/3460730565/taskgui.git"
+    "url": "git+https://github.com/taskgui/taskgui.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/3460730565/taskgui/issues"
+    "url": "https://github.com/taskgui/taskgui/issues"
   },
-  "homepage": "https://github.com/3460730565/taskgui#readme"
+  "homepage": "https://github.com/taskgui/taskgui#readme",
+  "dependencies": {
+    "inquirer": "^1.2.3",
+    "tty.js": "^0.2.15",
+    "user-home": "^2.0.0",
+    "yargs": "^6.4.0"
+  }
 }

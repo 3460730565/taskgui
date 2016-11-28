@@ -1,0 +1,53 @@
+<!doctype html>
+<head>
+  <title>xterm.js</title>
+  <link rel="stylesheet" href="xterm.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery.js"></script>
+  <script src="socket.io/socket.io.js"></script>
+  <script src="xterm.js"></script>
+  <script src="fit.js"></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <h1>task gui</h1>
+  <div id="main">
+    <div class="task-list">
+      <li>ls</li>
+      <li>pwd</li>
+      <li>git status</li>
+    </div>
+    <div id="terminal-container"></div>
+  </div>
+  <script>
+    $(function(){
+      $.get('sre.json', function(res){
+        console.log(res)
+        var cd = "cd " + res.path
+        $.sh(cd, 4000)
+        
+        var l = []
+        for(var k in res.scripts){
+          l.push("<li>" + k + "</li>")
+        }
+        
+        $('.task-list').html(l.join(""))
+        
+        $("li").live('click', function (){
+          var command = "npm run " + $.trim($(this).html())
+          $.sh(command)
+        })
+      })
+      
+      $.sh = function(command, second=0){
+        setTimeout(function(){
+          for(var i in command){
+            console.log(command[i])
+            socket.emit('data', self.id, command[i]);
+          }
+          socket.emit('data', self.id, '\r');
+        },second) 
+      }
+    })
+  </script>
+</body>
