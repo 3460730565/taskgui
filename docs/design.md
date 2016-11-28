@@ -16,10 +16,10 @@
 ## 插件
 
 - package.json
-  - tg-plugin-gulp
-  - tg-plugin-grunt
+  - [tg-plugin-gulp](https://github.com/taskgui/tg-plugin-gulp)
+  - [tg-plugin-grunt](https://github.com/taskgui/tg-plugin-grunt)
   - tg-plugin-webpack
-  - tg-plugin-npm-scripts
+  - [tg-plugin-npm-scripts](https://github.com/taskgui/tg-plugin-npm-scripts)
 - task.json
 
 ## how to write plugin

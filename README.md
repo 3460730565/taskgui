@@ -4,6 +4,9 @@ task gui
 
 ![Preview](docs/preview.png)
 
+- [Design](docs/design.md)
+- [Guide](docs/guide.md)
+
 ## Install
 
     [sudo]npm install -g taskgui
