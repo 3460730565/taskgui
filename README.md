@@ -6,6 +6,12 @@ a cli tool for task gui in browser (npm scripts、gulp、grunt、webpack)
 
 ![Preview](docs/preview.png)
 
+## Features
+
+- [x] support npm script && gulp && grunt tasks
+- [x] command + k : clear sh history
+- [ ] auto detect task with tg-plugin-xxx
+
 ## Install
 
     [sudo]npm install -g taskgui
