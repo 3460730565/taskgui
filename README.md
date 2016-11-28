@@ -31,11 +31,10 @@ $ tg
 
 ```
 $ npm init -y
-$ npm i -D tg-plugin-npm-scripts
 $ tg
 ```
 
-if need auth, please fill user `foo` and password `bar`
+then open in browser
 
 http://127.0.0.1:7878/
 
