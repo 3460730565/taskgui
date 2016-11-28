@@ -21,7 +21,7 @@
   </div>
   <script>
     $(function(){
-      $.get('sre.json', function(res){
+      $.get('task.json', function(res){
         console.log(res)
         var cd = "cd " + res.path
         $.sh(cd, 4000)
