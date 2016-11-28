@@ -1,6 +1,6 @@
 # taskgui
 
-a cli tool for task gui (npm scripts、gulp、grunt、webpack)
+a cli tool for task gui in browser (npm scripts、gulp、grunt、webpack)
 
 [Design](docs/design.md) | [Guide](docs/guide.md) | [Plugins](docs/plugin.md) | [Api](docs/api.md)
 
