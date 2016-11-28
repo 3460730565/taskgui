@@ -628,9 +628,9 @@ tty.js:
     socket.io "0.9.16"
     term.js ">= 0.0.5"
 
-tty2:
-  version "0.2.15"
-  resolved "http://r.cnpmjs.org/tty2/download/tty2-0.2.15.tgz#3bfe92fca4e01e2d746c3a0b9fbfc1b4159d3398"
+tty2@0.2.16:
+  version "0.2.16"
+  resolved "http://r.cnpmjs.org/tty2/download/tty2-0.2.16.tgz#b7f0e1d5a9e810adf7bfeacf408e4f8a22ae1025"
   dependencies:
     express "3.4.4"
     pty.js ">= 0.2.13"
