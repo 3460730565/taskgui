@@ -1,10 +1,10 @@
 # taskgui
 
-task gui
+a cli tool for task gui (npm scripts、gulp、grunt、webpack)
+
+[Design](docs/design.md) | [Guide](docs/guide.md) | [Plugins](docs/plugin.md) | [Api](docs/api.md)
 
 ![Preview](docs/preview.png)
-
-[Design](docs/design.md) |[Guide](docs/guide.md) |[Plugins](docs/plugin.md) |[Api](docs/api.md)
 
 ## Install
 
