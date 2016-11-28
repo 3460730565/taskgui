@@ -56,6 +56,5 @@ for(var k in devDependencies){
 
 app.listen();
 
-var open = require("open");
-open("http://127.0.0.1:" + conf.port + "/");
+require("open")("http://127.0.0.1:" + conf.port + "/");
 // fs.writeFileSync(__dirname + '/app/sre.json',  JSON.stringify(all, null, 4))
