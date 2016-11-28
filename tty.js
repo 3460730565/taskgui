@@ -6,11 +6,23 @@ var express = require('express')
 var userHome = require('user-home')
 var currentPath = process.cwd()
 
+var exec = require('child_process').exec;
+// exec('echo $SHELL', (err, stdout, stderr) => {
+//   if (err) {
+//     console.error(err);
+//     return;
+//   }
+//   console.log(stdout);
+// });
+
+var sh = process.env.SHELL.split('/')
+// console.log(sh[sh.length-1])
+
 var conf = {
   static: __dirname + "/static",
-  shell: 'zsh',
+  shell: sh[sh.length-1],
   users: {
-    foo: 'bar'
+    // foo: 'bar'
   },
   port: 7878
 }
