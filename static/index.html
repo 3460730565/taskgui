@@ -27,14 +27,16 @@
         $.sh(cd, 4000)
         
         var l = []
-        for(var k in res.npm_scripts.tasks){
-          l.push("<li>" + k + "</li>")
+        for(var k in res.tasks){
+          for(var j in res.tasks[k].tasks){
+            l.push("<li class='awz' p='" + res.tasks[k].prefix + "'>" + res.tasks[k].tasks[j] + "</li>")
+          }
         }
         
         $('.task-list').html(l.join(""))
         
         $("li").live('click', function (){
-          var command = res.npm_scripts.prefix + ' ' + $.trim($(this).html())
+          var command = $(this).attr("p") + ' ' + $.trim($(this).html())
           $.sh(command)
         })
       })

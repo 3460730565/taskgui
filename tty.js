@@ -26,8 +26,9 @@ app.get('/foo', function(req, res, next) {
 var taskFile = __dirname + '/static/task.json'
 if (!fs.existsSync(taskFile)) {
   fs.writeFileSync(taskFile,  JSON.stringify({
-    root:__dirname, 
-    path: currentPath
+    root: __dirname, 
+    path: currentPath,
+    tasks: {}
   }, null, 4))
 }
 
