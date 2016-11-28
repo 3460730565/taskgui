@@ -10,7 +10,8 @@
   },
   "preferGlobal": "true",
   "bin": {
-    "sre": "index.js"
+    "taskgui": "index.js",
+    "tg": "index.js"
   },
   "repository": {
     "type": "git",
