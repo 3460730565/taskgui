@@ -1,40 +1,20 @@
-# sre
+# taskgui
 
-sre = scripts run easy
-
-只支持*nix
+task gui
 
 ## Install
 
-    [sudo]npm install -g sre
+    [sudo]npm install -g taskgui
+    
+avaiable cli command
+
+- taskgui
+- tg
 
 ## Usage 
 
 ```
-$ sre -h
-Usages: sre = scripts run easy
-	 sre -h or --help
-	 sre -d or --delete
-	 sre -l or --list
-```
-
-list npm scripts with pwd/package.json
-
-```
-$ sre
-available script:
-	start
-	test
-	postinstall
-```
-
-then you can use `start` = `npm run start`
-
-```
-$ sre -l
-alias start='npm run start'
-alias test='npm run test'
-alias postinstall='npm run postinstall'
+$ tg
 ```
 
 ## Contributing
