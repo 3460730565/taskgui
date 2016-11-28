@@ -8,7 +8,7 @@ a cli tool for task gui in browser (npm scripts、gulp、grunt、webpack)
 
 ## Features
 
-- [x] support npm script && gulp && grunt tasks
+- [x] build-in support npm script && gulp && grunt tasks
 - [x] command + k : clear sh history
 - [ ] auto detect task with tg-plugin-xxx
 

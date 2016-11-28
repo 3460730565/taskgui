@@ -24,7 +24,8 @@ var conf = {
   users: {
     // foo: 'bar'
   },
-  port: 7878
+  port: 7878,
+  plugins: [{'Gulpfile.js':"tg-plugin-gulp"},{"Gruntfile.js":  "tg-plugin-grunt"}, {"package.json": "tg-plugin-npm-scripts"}]
 }
 
 var app = tty.createServer(conf);
@@ -55,6 +56,19 @@ var cfg = require(packageFile)
 
 var devDependencies = cfg.devDependencies
 
+for(var k in conf.plugins){
+  console.log(conf.plugins[k])
+  var i = conf.plugins[k];
+  for(var j in i){
+    var opts = {
+      root:__dirname, 
+      cwd: currentPath
+    }
+    console.log('build-in ' + j)
+  
+    require(i[j])(opts)
+  }
+}
 
 for(var k in devDependencies){
   console.log(k)
