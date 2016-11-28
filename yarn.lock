@@ -628,6 +628,15 @@ tty.js:
     socket.io "0.9.16"
     term.js ">= 0.0.5"
 
+tty2:
+  version "0.2.15"
+  resolved "http://r.cnpmjs.org/tty2/download/tty2-0.2.15.tgz#3bfe92fca4e01e2d746c3a0b9fbfc1b4159d3398"
+  dependencies:
+    express "3.4.4"
+    pty.js ">= 0.2.13"
+    socket.io "0.9.16"
+    term.js ">= 0.0.5"
+
 typedarray@~0.0.5:
   version "0.0.6"
   resolved "http://r.cnpmjs.org/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"

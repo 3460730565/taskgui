@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
 var fs = require('fs')
-var tty = require('tty.js');
+var tty = require('tty2');
 var express = require('express')
 var userHome = require('user-home')
 var currentPath = process.cwd()
 
 var app = tty.createServer({
+  static: __dirname + "/static",
   shell: 'zsh',
   users: {
     foo: 'bar'
@@ -18,7 +19,7 @@ app.get('/foo', function(req, res, next) {
   res.send('bar');
 });
 
-app.use(express.static(__dirname + '/static'));
+// app.use(express.static(__dirname + '/static'));
 
 var taskFile = __dirname + '/static/task.json'
 if (!fs.existsSync(taskFile)) {
