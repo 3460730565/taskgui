@@ -4,8 +4,7 @@ task gui
 
 ![Preview](docs/preview.png)
 
-- [Design](docs/design.md)
-- [Guide](docs/guide.md)
+[Design](docs/design.md) |[Guide](docs/guide.md) |[Plugins](docs/plugin.md) |[Api](docs/api.md)
 
 ## Install
 
