@@ -24,9 +24,13 @@
   },
   "homepage": "https://github.com/taskgui/taskgui#readme",
   "dependencies": {
+    "debug": "^2.3.3",
     "inquirer": "^1.2.3",
     "tty.js": "^0.2.15",
     "user-home": "^2.0.0",
     "yargs": "^6.4.0"
+  },
+  "devDependencies": {
+    "debug": "^2.3.3"
   }
 }

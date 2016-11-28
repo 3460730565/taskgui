@@ -20,9 +20,32 @@ app.get('/foo', function(req, res, next) {
 
 app.use(express.static(__dirname + '/../static'));
 
-var taskFile = __dirname +  '/static/task.json'
+var taskFile = __dirname + '/static/task.json'
 if (!fs.existsSync(taskFile)) {
   fs.writeFileSync(taskFile,  JSON.stringify({}, null, 4))
+}
+
+var packageFile = currentPath + '/package.json'
+
+if (!fs.existsSync(packageFile)) {
+  console.log('not exist package.json')
+  return
+}
+
+var cfg = require(packageFile)
+
+var devDependencies = cfg.devDependencies
+
+
+for(var k in devDependencies){
+  console.log(k)
+  if (/^tg-plugin/.test(k) === true) {
+    var opts = {
+      root:__dirname, 
+      cwd: currentPath
+    }
+    require(currentPath + '/node_modules/' + k)(opts)
+  }
 }
 
 app.listen();
